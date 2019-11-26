@@ -1,0 +1,44 @@
+{
+  "name": "aitc-client",
+  "devDependencies": {
+    "electron": "^7.1.2",
+    "electron-builder": "^22.1.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "build": "electron-builder -wl",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "main": "main.js",
+  "description": "A simple client to view AITC website.",
+  "author": {
+    "email": "turx2003@gmail.com",
+    "name": "TURX",
+    "url": "https://turx.gq"
+  },
+  "version": "0.0.1",
+  "build": {
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  }
+}
